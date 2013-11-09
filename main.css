@@ -20,6 +20,9 @@ a {
 a:hover {
   text-decoration: none;
 }
+#social {
+  padding: 10px;
+}
 #container {
   width: 90%;
   margin: 0 auto;
@@ -109,6 +112,12 @@ a:hover {
   text-align: center;
 }
 @media only screen and (min-width: 640px) {
+  #social {
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
   #container {
     width: 400px;
     float: right;
