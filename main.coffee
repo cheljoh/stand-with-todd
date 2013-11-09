@@ -14,7 +14,7 @@ $ ->
     $('h1.signed').show()
     $('h1.not-signed').hide()
 
-  $.getJSON 'http://localhost:3000', (data) ->
+  $.getJSON 'http://stand-with-todd.herokuapp.com', (data) ->
     addSigners(data)
 
     $('.signers-count').text(data.count)
@@ -28,7 +28,7 @@ $ ->
     $(@).data('original-text', $(@).text())
     $(@).text('Loading...')
 
-    $.getJSON "http://localhost:3000/more?skip=#{skip}", (data) =>
+    $.getJSON "http://stand-with-todd.herokuapp.com/more?skip=#{skip}", (data) =>
       addSigners(data)
       skip = skip + data.signers.length
       loading = false

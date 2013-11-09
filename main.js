@@ -27,7 +27,7 @@
       $('h1.signed').show();
       $('h1.not-signed').hide();
     }
-    $.getJSON('http://localhost:3000', function(data) {
+    $.getJSON('http://stand-with-todd.herokuapp.com', function(data) {
       addSigners(data);
       return $('.signers-count').text(data.count);
     });
@@ -42,7 +42,7 @@
       loading = true;
       $(this).data('original-text', $(this).text());
       $(this).text('Loading...');
-      return $.getJSON("http://localhost:3000/more?skip=" + skip, function(data) {
+      return $.getJSON("http://stand-with-todd.herokuapp.com/more?skip=" + skip, function(data) {
         addSigners(data);
         skip = skip + data.signers.length;
         loading = false;
