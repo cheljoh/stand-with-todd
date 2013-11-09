@@ -36,3 +36,8 @@ $ ->
       skip = skip + data.signers.length
       loading = false
       $(@).text($(@).data('original-text'))
+
+  $(window).on 'resize', ->
+    $('ul.signers img').each ->
+      $(@).css('height': '')
+      $(@).height($(@).width())

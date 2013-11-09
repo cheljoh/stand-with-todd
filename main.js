@@ -36,7 +36,7 @@
     });
     skip = 10;
     loading = false;
-    return $('a.load-more').click(function() {
+    $('a.load-more').click(function() {
       var _this = this;
 
       if (loading) {
@@ -50,6 +50,14 @@
         skip = skip + data.signers.length;
         loading = false;
         return $(_this).text($(_this).data('original-text'));
+      });
+    });
+    return $(window).on('resize', function() {
+      return $('ul.signers img').each(function() {
+        $(this).css({
+          'height': ''
+        });
+        return $(this).height($(this).width());
       });
     });
   });
