@@ -21,19 +21,19 @@ a:hover {
   text-decoration: none;
 }
 #container {
-  width: 600px;
-  float: right;
-  margin: 20px 15% 20px 0;
+  width: 90%;
+  margin: 0 auto;
+  float: none;
 }
 #container h1 {
   text-transform: uppercase;
-  font-size: 55px;
-  line-height: 60px;
+  font-size: 35px;
+  line-height: 40px;
   margin: 0.4em 0;
 }
 #container p {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 20px;
 }
 #container .sign-container {
   position: relative;
@@ -42,12 +42,7 @@ a:hover {
 }
 #container .sign-container .stand-arrow {
   background: url("stand-arrow.png") no-repeat -18px -4px;
-  background-size: 400px 300px;
-  width: 352px;
-  height: 281px;
-  position: absolute;
-  top: -248px;
-  left: -372px;
+  display: none;
 }
 #container .sign-container .sign-button {
   width: 260px;
@@ -60,6 +55,7 @@ a:hover {
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 14px;
+  margin-bottom: 5px;
 }
 #container .sign-container .sign-button .fa {
   margin-right: 5px;
@@ -99,7 +95,7 @@ a:hover {
 #container .signers-container ul li {
   width: 15%;
   display: inline-block;
-  margin: 0.5% 2%;
+  margin: 0.5% 1.5%;
 }
 #container .signers-container ul li img {
   width: 100%;
@@ -112,10 +108,50 @@ a:hover {
   font-size: 12px;
   text-align: center;
 }
-@media only screen and (min-device-width : 100px) and (max-device-width : 640px) {
-  div#container {
-    width: 90% !important;
-    margin: 0 auto;
-    float: none;
+@media only screen and (min-width: 640px) {
+  #container {
+    width: 400px;
+    float: right;
+    margin: 20px 5% 20px 0;
+  }
+  #container h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  #container .sign-container .stand-arrow {
+    background-size: 300px 225px;
+    width: 264px;
+    height: 211px;
+    position: absolute;
+    top: -180px;
+    left: -250px;
+    display: block;
+  }
+}
+@media only screen and (min-width: 1160px) {
+  #container {
+    width: 600px;
+    float: right;
+    margin: 20px 15% 20px 0;
+  }
+  #container h1 {
+    font-size: 55px;
+    line-height: 60px;
+  }
+  #container p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  #container .sign-container .stand-arrow {
+    background-size: 400px 300px;
+    width: 352px;
+    height: 281px;
+    position: absolute;
+    top: -248px;
+    left: -372px;
   }
 }

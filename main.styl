@@ -28,19 +28,19 @@ a
     text-decoration none
 
 #container
-  width:600px;
-  float:right;
-  margin 20px 15% 20px 0
+  width:90%;
+  margin:0 auto;
+  float:none
 
   h1
     text-transform: uppercase;
-    font-size:55px;
-    line-height:60px;
+    font-size 35px
+    line-height 40px
     margin: 0.4em 0
 
   p
-    font-size:18px;
-    line-height:28px;
+    font-size 14px
+    line-height 20px
 
   .sign-container
     position relative
@@ -49,12 +49,7 @@ a
 
     .stand-arrow
       background: url('stand-arrow.png') no-repeat -18px -4px;
-      background-size: 400px 300px;
-      width: 352px;
-      height: 281px;
-      position absolute
-      top -248px
-      left -372px
+      display none
 
     .sign-button
       width 260px
@@ -67,6 +62,7 @@ a
       border-radius 3px
       text-transform uppercase
       font-size 14px
+      margin-bottom 5px
 
       .fa
         margin-right 5px
@@ -98,7 +94,7 @@ a
       li
         width 15%
         display inline-block
-        margin 0.5% 2%
+        margin 0.5% 1.5%
 
         img
           width 100%
@@ -111,9 +107,51 @@ a
     font-size 12px
     text-align center
 
-@media only screen and (min-device-width : 100px) and (max-device-width : 640px)
+@media only screen and (min-width: 640px)
 
-  div#container
-    width:90% !important;
-    margin:0 auto;
-    float:none
+  #container
+    width:400px;
+    float:right;
+    margin 20px 5% 20px 0
+
+    h1
+      font-size:45px;
+      line-height:50px;
+
+    p
+      font-size:16px;
+      line-height:22px;
+
+    .sign-container
+      .stand-arrow
+        background-size: 300px 225px;
+        width: 264px;
+        height: 211px;
+        position absolute
+        top -180px
+        left -250px
+        display block
+
+@media only screen and (min-width: 1160px)
+
+  #container
+    width: 600px;
+    float: right;
+    margin: 20px 15% 20px 0;
+
+    h1
+      font-size: 55px;
+      line-height: 60px;
+
+    p
+      font-size: 18px;
+      line-height: 28px;
+
+    .sign-container
+      .stand-arrow
+        background-size: 400px 300px;
+        width: 352px;
+        height: 281px;
+        position: absolute;
+        top: -248px;
+        left: -372px;
