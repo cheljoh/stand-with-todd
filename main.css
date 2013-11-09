@@ -1,29 +1,77 @@
-html {
+html,
+body {
+  height: 100%;
+}
+body {
   background: url("bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-font-smoothing: antialiased;
-}
-body {
   font-family: 'Open Sans', sans-serif;
   color: #fff;
+  margin: 0;
 }
-div#container {
+#container {
   width: 600px;
   float: right;
-  margin-right: 15%;
-  margin-top: 30px;
+  margin: 20px 15% 20px 0;
 }
-h1 {
+#container h1 {
   text-transform: uppercase;
   font-size: 55px;
   line-height: 60px;
+  margin: 0.4em 0;
 }
-p {
+#container p {
   font-size: 18px;
   line-height: 28px;
+}
+.sign-container {
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+}
+.sign-container .stand-arrow {
+  background: url("stand-arrow.png") no-repeat -18px -4px;
+  background-size: 400px 300px;
+  width: 352px;
+  height: 281px;
+  position: absolute;
+  top: -248px;
+  left: -372px;
+}
+.sign-container .sign-button {
+  width: 260px;
+  margin-right: 5px;
+  padding: 8px 12px;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.sign-container .sign-button .fa {
+  margin-right: 5px;
+}
+.sign-container .sign-button:active {
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
+}
+.sign-container .sign-button.facebook {
+  background: #47639e;
+  border: 1px solid #40598e;
+}
+.sign-container .sign-button.facebook:hover {
+  background: #40598e;
+}
+.sign-container .sign-button.twitter {
+  background: #4b9ed1;
+  border: 1px solid #3492cb;
+}
+.sign-container .sign-button.twitter:hover {
+  background: #3492cb;
 }
 @media only screen and (min-device-width : 100px) and (max-device-width : 640px) {
   div#container {
