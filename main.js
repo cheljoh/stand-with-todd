@@ -9,13 +9,16 @@
   var addSigners;
 
   addSigners = function(data) {
-    var s, _i, _len, _ref, _results;
+    var $img, $li, s, _i, _len, _ref, _results;
 
     _ref = data.signers;
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       s = _ref[_i];
-      _results.push($('ul.signers').append("<li><img src='" + s.picture_url + "' alt='" + s.name + "' title='" + s.name + "' /></li>"));
+      $li = $("<li><img src='" + s.picture_url + "' alt='" + s.name + "' title='" + s.name + "' /></li>");
+      $img = $li.find('img');
+      $('ul.signers').append($li);
+      _results.push($img.height($img.width()));
     }
     return _results;
   };

@@ -7,7 +7,10 @@
 
 addSigners = (data) ->
   for s in data.signers
-    $('ul.signers').append("<li><img src='#{s.picture_url}' alt='#{s.name}' title='#{s.name}' /></li>")
+    $li = $("<li><img src='#{s.picture_url}' alt='#{s.name}' title='#{s.name}' /></li>")
+    $img = $li.find('img')
+    $('ul.signers').append($li)
+    $img.height($img.width())
 
 $ ->
   if $.getUrlParam('signed')
