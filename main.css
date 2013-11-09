@@ -15,6 +15,7 @@ body {
 a {
   color: #fff;
   text-decoration: underline;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: none;
@@ -34,12 +35,12 @@ a:hover {
   font-size: 18px;
   line-height: 28px;
 }
-.sign-container {
+#container .sign-container {
   position: relative;
   margin: 20px 0;
   text-align: center;
 }
-.sign-container .stand-arrow {
+#container .sign-container .stand-arrow {
   background: url("stand-arrow.png") no-repeat -18px -4px;
   background-size: 400px 300px;
   width: 352px;
@@ -48,7 +49,7 @@ a:hover {
   top: -248px;
   left: -372px;
 }
-.sign-container .sign-button {
+#container .sign-container .sign-button {
   width: 260px;
   margin-right: 5px;
   padding: 8px 12px;
@@ -60,25 +61,56 @@ a:hover {
   text-transform: uppercase;
   font-size: 14px;
 }
-.sign-container .sign-button .fa {
+#container .sign-container .sign-button .fa {
   margin-right: 5px;
 }
-.sign-container .sign-button:active {
+#container .sign-container .sign-button:active {
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.2);
 }
-.sign-container .sign-button.facebook {
+#container .sign-container .sign-button.facebook {
   background: #47639e;
   border: 1px solid #40598e;
 }
-.sign-container .sign-button.facebook:hover {
+#container .sign-container .sign-button.facebook:hover {
   background: #40598e;
 }
-.sign-container .sign-button.twitter {
+#container .sign-container .sign-button.twitter {
   background: #4b9ed1;
   border: 1px solid #3492cb;
 }
-.sign-container .sign-button.twitter:hover {
+#container .sign-container .sign-button.twitter:hover {
   background: #3492cb;
+}
+#container .signers-container {
+  text-align: center;
+  padding-bottom: 30px;
+}
+#container .signers-container h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0.2em 0;
+}
+#container .signers-container ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+#container .signers-container ul li {
+  width: 15%;
+  display: inline-block;
+  margin: 0.5% 2%;
+}
+#container .signers-container ul li img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #eee;
+  box-shadow: 1px 1px 0 #444;
+}
+#container .footer {
+  padding-bottom: 20px;
+  font-size: 12px;
+  text-align: center;
 }
 @media only screen and (min-device-width : 100px) and (max-device-width : 640px) {
   div#container {
