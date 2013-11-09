@@ -1,16 +1,23 @@
+`(function($){
+  $.getUrlParam = function(key){
+    var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
+    return result && unescape(result[1]) || "";
+  };
+})(jQuery);`
+
 addSigners = (data) ->
   for s in data.signers
-    $('ul.signers').append("<li><img src='#{s.picture_url}' /></li>")
+    $('ul.signers').append("<li><img src='#{s.picture_url}' alt='#{s.name}' title='#{s.name}' /></li>")
 
 $ ->
+  if $.getUrlParam('signed')
+    $('h1.signed').show()
+    $('h1.not-signed').hide()
+
   $.getJSON 'http://localhost:3000', (data) ->
     addSigners(data)
 
     $('.signers-count').text(data.count)
-
-    if data.signed
-      $('h1.signed').show()
-      $('h1.not-signed').hide()
 
   skip = 10
   loading = false
