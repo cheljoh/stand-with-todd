@@ -8,9 +8,7 @@
 addSigners = (data) ->
   for s in data.signers
     $li = $("<li><img src='#{s.picture_url}' alt='#{s.name}' title='#{s.name}' /></li>")
-    $img = $li.find('img')
     $('ul.signers').append($li)
-    $img.height($img.width())
 
 $ ->
   if $.getUrlParam('signed')
@@ -36,8 +34,3 @@ $ ->
       skip = skip + data.signers.length
       loading = false
       $(@).text($(@).data('original-text'))
-
-  $(window).on 'resize', ->
-    $('ul.signers img').each ->
-      $(@).css('height': '')
-      $(@).height($(@).width())

@@ -9,16 +9,14 @@
   var addSigners;
 
   addSigners = function(data) {
-    var $img, $li, s, _i, _len, _ref, _results;
+    var $li, s, _i, _len, _ref, _results;
 
     _ref = data.signers;
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       s = _ref[_i];
       $li = $("<li><img src='" + s.picture_url + "' alt='" + s.name + "' title='" + s.name + "' /></li>");
-      $img = $li.find('img');
-      $('ul.signers').append($li);
-      _results.push($img.height($img.width()));
+      _results.push($('ul.signers').append($li));
     }
     return _results;
   };
@@ -36,7 +34,7 @@
     });
     skip = 10;
     loading = false;
-    $('a.load-more').click(function() {
+    return $('a.load-more').click(function() {
       var _this = this;
 
       if (loading) {
@@ -50,14 +48,6 @@
         skip = skip + data.signers.length;
         loading = false;
         return $(_this).text($(_this).data('original-text'));
-      });
-    });
-    return $(window).on('resize', function() {
-      return $('ul.signers img').each(function() {
-        $(this).css({
-          'height': ''
-        });
-        return $(this).height($(this).width());
       });
     });
   });

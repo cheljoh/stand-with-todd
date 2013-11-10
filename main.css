@@ -96,15 +96,18 @@ a:hover {
   padding: 0;
 }
 #container .signers-container ul li {
-  width: 15%;
+  width: 45px;
+  height: 45px;
   display: inline-block;
   margin: 0.5% 1.5%;
-}
-#container .signers-container ul li img {
-  width: 100%;
   border-radius: 50%;
+  overflow: hidden;
   border: 3px solid #eee;
   box-shadow: 1px 1px 0 #444;
+}
+#container .signers-container ul li img {
+  width: auto;
+  height: 45px;
 }
 #container .footer {
   padding-bottom: 20px;
@@ -140,6 +143,14 @@ a:hover {
     left: -250px;
     display: block;
   }
+  #container .signers-container ul li {
+    width: 90px;
+    height: 90px;
+  }
+  #container .signers-container ul li img {
+    width: auto;
+    height: 90px;
+  }
 }
 @media only screen and (min-width: 1160px) {
   #container {
@@ -153,7 +164,7 @@ a:hover {
   }
   #container p {
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
   }
   #container .sign-container .stand-arrow {
     background-size: 400px 300px;
