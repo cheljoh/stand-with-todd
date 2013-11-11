@@ -24,7 +24,7 @@
     return _results;
   };
 
-  APP_HOST = "http://localhost:3000";
+  APP_HOST = "http://stand-with-todd.herokuapp.com";
 
   $(function() {
     var loading, skip;

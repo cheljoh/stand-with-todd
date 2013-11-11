@@ -8,7 +8,7 @@ addSigners = (data) ->
     $li = $("<li><img src='#{s.picture_url}' alt='#{s._id}' title='#{s._id}' /></li>")
     $('ul.signers').append($li)
 
-APP_HOST = "http://localhost:3000"
+APP_HOST = "http://stand-with-todd.herokuapp.com"
 
 $ ->
   if $.getUrlParam('signed')
