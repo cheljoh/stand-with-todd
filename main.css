@@ -104,6 +104,7 @@ a:hover {
   overflow: hidden;
   border: 3px solid #eee;
   box-shadow: 1px 1px 0 #444;
+  background-color: #eee;
 }
 #container .signers-container ul li img {
   width: auto;
