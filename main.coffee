@@ -5,15 +5,21 @@ do ($=jQuery)->
 
 addSigners = (data) ->
   for s in data.signers
-    $li = $("<li><img src='#{s.picture_url}' alt='#{s._id}' title='#{s._id}' /></li>")
+    $li = $("<li><img src='#{s.picture_url}' alt='#{s.name}' title='#{s.name}' /></li>")
     $('ul.signers').append($li)
 
 APP_HOST = "http://stand-with-todd.herokuapp.com"
+
+SPECIAL_SIGNERS = [
+
+]
 
 $ ->
   if $.getUrlParam('signed')
     $('h1.signed').show()
     $('h1.not-signed').hide()
+
+  addSigners(signers: SPECIAL_SIGNERS)
 
   $.getJSON "#{APP_HOST}?limit=10", (data) ->
     $('.signers-count').text(data.count)
