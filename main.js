@@ -6,7 +6,7 @@
     return result && unescape(result[1]) || "";
   };
 })(jQuery);;
-  var addSigners;
+  var APP_HOST, addSigners;
 
   addSigners = function(data) {
     var $li, s, _i, _len, _ref, _results;
@@ -15,11 +15,13 @@
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       s = _ref[_i];
-      $li = $("<li><img src='" + s.picture_url + "' alt='" + s.name + "' title='" + s.name + "' /></li>");
+      $li = $("<li><img src='" + s.picture_url + "' alt='" + s._id + "' title='" + s._id + "' /></li>");
       _results.push($('ul.signers').append($li));
     }
     return _results;
   };
+
+  APP_HOST = "http://localhost:3000";
 
   $(function() {
     var loading, skip;
@@ -28,9 +30,9 @@
       $('h1.signed').show();
       $('h1.not-signed').hide();
     }
-    $.getJSON('http://stand-with-todd.herokuapp.com', function(data) {
-      addSigners(data);
-      return $('.signers-count').text(data.count);
+    $.getJSON("" + APP_HOST + "?limit=10", function(data) {
+      $('.signers-count').text(data.count);
+      return addSigners(data);
     });
     skip = 10;
     loading = false;
@@ -43,7 +45,7 @@
       loading = true;
       $(this).data('original-text', $(this).text());
       $(this).text('Loading...');
-      return $.getJSON("http://stand-with-todd.herokuapp.com/more?skip=" + skip, function(data) {
+      return $.getJSON("" + APP_HOST + "?skip=" + skip, function(data) {
         addSigners(data);
         skip = skip + data.signers.length;
         loading = false;

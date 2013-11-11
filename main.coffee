@@ -7,18 +7,19 @@
 
 addSigners = (data) ->
   for s in data.signers
-    $li = $("<li><img src='#{s.picture_url}' alt='#{s.name}' title='#{s.name}' /></li>")
+    $li = $("<li><img src='#{s.picture_url}' alt='#{s._id}' title='#{s._id}' /></li>")
     $('ul.signers').append($li)
+
+APP_HOST = "http://localhost:3000"
 
 $ ->
   if $.getUrlParam('signed')
     $('h1.signed').show()
     $('h1.not-signed').hide()
 
-  $.getJSON 'http://stand-with-todd.herokuapp.com', (data) ->
-    addSigners(data)
-
+  $.getJSON "#{APP_HOST}?limit=10", (data) ->
     $('.signers-count').text(data.count)
+    addSigners(data)
 
   skip = 10
   loading = false
@@ -29,7 +30,7 @@ $ ->
     $(@).data('original-text', $(@).text())
     $(@).text('Loading...')
 
-    $.getJSON "http://stand-with-todd.herokuapp.com/more?skip=#{skip}", (data) =>
+    $.getJSON "#{APP_HOST}?skip=#{skip}", (data) =>
       addSigners(data)
       skip = skip + data.signers.length
       loading = false
