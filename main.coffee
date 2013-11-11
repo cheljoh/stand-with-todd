@@ -1,9 +1,7 @@
-`(function($){
-  $.getUrlParam = function(key){
-    var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
-    return result && unescape(result[1]) || "";
-  };
-})(jQuery);`
+do ($=jQuery)->
+  $.getUrlParam = (key)->
+    result = new RegExp("#{key}=([^&]*)", "i").exec(window.location.search)
+    return result and unescape(result[1]) or ""
 
 addSigners = (data) ->
   for s in data.signers
