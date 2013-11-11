@@ -17,9 +17,6 @@ SPECIAL_SIGNERS = [
   name: "Tim O'Reilly"
   picture_url: 'https://pbs.twimg.com/profile_images/2823681988/f4f6f2bed8ab4d5a48dea4b9ea85d5f1.jpeg'
 ,
-  name: 'Clay Shirky'
-  picture_url: 'https://pbs.twimg.com/profile_images/608299691/hands.jpg'
-,
   name: 'Adam Becker'
   picture_url: 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/211991_1032810376_1446025_n.jpg'
 ,
