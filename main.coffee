@@ -17,15 +17,19 @@ SPECIAL_SIGNERS = [
   name: "Tim O'Reilly"
   picture_url: 'https://pbs.twimg.com/profile_images/2823681988/f4f6f2bed8ab4d5a48dea4b9ea85d5f1.jpeg'
 ,
-  name: 'Adam Becker'
-  picture_url: 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/211991_1032810376_1446025_n.jpg'
+  name: "Eric Reiss"
+  picture_url: 'https://pbs.twimg.com/profile_images/1769304611/image1327092761.png'
 ,
-  name: 'Clay Johnson'
-  picture_url: 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1118362_500311166_1359454261_n.jpg'
+  name: "John Tolva"
+  picture_url: 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash1/273765_835915087_1942680115_n.jpg'
 ,
-  name: 'Mike Aleo'
-  picture_url: 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/1118049_15209525_1211909952_n.jpg'
+  name: 'Cheryl Contee'
+  picture_url: 'https://pbs.twimg.com/profile_images/1780647236/Screen_shot_2011-03-31_at_8.33.24_AM.png'
+,
+  name: 'Janice Fraser'
+  picture_url: 'https://pbs.twimg.com/profile_images/1207809084/janice_thumb.jpg'
 ]
+
 
 $ ->
   if $.getUrlParam('signed')
