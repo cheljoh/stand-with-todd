@@ -18,7 +18,7 @@
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       s = _ref[_i];
-      $li = $("<li><img src='" + s.picture_url + "' alt='" + s.name + "' title='" + s.name + "' /></li>");
+      $li = $("<li><img src=\"" + s.picture_url + "\" alt=\"" + s.name + "\" title=\"" + s.name + "\" /></li>");
       _results.push($('ul.signers').append($li));
     }
     return _results;

@@ -5,7 +5,7 @@ do ($=jQuery)->
 
 addSigners = (data) ->
   for s in data.signers
-    $li = $("<li><img src='#{s.picture_url}' alt='#{s.name}' title='#{s.name}' /></li>")
+    $li = $("""<li><img src="#{s.picture_url}" alt="#{s.name}" title="#{s.name}" /></li>""")
     $('ul.signers').append($li)
 
 APP_HOST = "http://stand-with-todd.herokuapp.com"
