@@ -24,8 +24,8 @@
     return _results;
   };
 
-  // APP_HOST = "http://petition-backend.herokuapp.com/signers";
-  APP_HOST = "http://localhost:3000/signers";
+  APP_HOST = "http://petition-backend.herokuapp.com/signers";
+  // APP_HOST = "http://localhost:3000/signers";
 
   $(function() {
     var currentPage, totalPages, loading;
@@ -61,7 +61,6 @@
       return $.getJSON("" + APP_HOST + "?page=" + currentPage, function(data) {
         addSigners(data.signers);
         loading = false;
-        console.log('current page less than total pages', currentPage < totalPages);
         if (currentPage < totalPages){
           $('a.load-more').text('Load More');
         } else {
